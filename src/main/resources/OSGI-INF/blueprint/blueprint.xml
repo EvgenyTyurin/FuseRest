@@ -26,7 +26,7 @@
         <!-- REST enabled -->
         <restConfiguration component="spark-rest" port="9091"/>
         <!-- Process get on localhost/say/hello and localhost/say/bye -->
-        <rest id="rest1" path="/say">
+        <rest id="rest1" path="/say" produces="text/html">
             <get id="getHello" uri="/hello">
                 <to uri="direct:hello"/>
             </get>
